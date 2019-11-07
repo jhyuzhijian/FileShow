@@ -29,6 +29,7 @@ namespace FileShow
             //filename.DereferenceLinks = true;
             //filename.Multiselect = false;
             //filename.RestoreDirectory = true;
+
             CommonOpenFileDialog dialog = new CommonOpenFileDialog();
             dialog.InitialDirectory = "C:\\Users";
             dialog.IsFolderPicker = true;
@@ -45,7 +46,6 @@ namespace FileShow
         {
             var fileName = textBox3.Text;
             string files = textBox1.Text;
-            //string[] filenames = Directory.GetFiles(files, "*", SearchOption.AllDirectories);
             var isChecked = checkBox1.Checked;
             var option = SearchOption.TopDirectoryOnly;
             if (isChecked)
@@ -89,7 +89,7 @@ namespace FileShow
             dataGridView1.DataSource = (from s in lists
                                         select new
                                         {
-                                            fileName = s//Path.GetFileName(s)
+                                            fileName = s
                                         })
                                         .ToList();
         }

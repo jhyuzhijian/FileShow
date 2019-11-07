@@ -8,7 +8,7 @@ namespace FileShow
 {
     public class FilterSimilar
     {
-
+        //编辑距离算法 (计算字符串相似度)
         private int compare(String str, String target)
         {
             //int[][] d;
